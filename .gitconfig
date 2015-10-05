@@ -1,11 +1,1 @@
-[user]
-	email = joey.thies@gmail.com
-	name = tcandens
-[alias]
-	co = checkout
-	cob = checkout -b
-	ci = commit -m
-	st = status
-	br = branch
-	aa = !git add . && git status
-	pom = pull origin master
+/home/joey/.gitconfig

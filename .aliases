@@ -1,14 +1,1 @@
-# Make sure tmux recognizes all colors and italics
-# myterm-it refers to custom terminfo
-# https://www.reddit.com/r/vim/comments/24g8r8/italics_in_terminal_vim_and_tmux/
-alias mux='env TERM=myterm-it tmux -2'
-# Make Vim recognize all colors and italics
-if [ -n "$TMUX" ]; then
-  alias vm='vim'
-else
-  alias vm='env TERM=myterm-it vim'
-fi
-
-alias capsoff='setxkbmap -option caps:swapescape'
-# Shortcut for cleaning up /boot whenever partition is getting full
-#alias cleanboot="sudo apt-get purge $(dpkg -l linux-{image,headers}-'[0-9]*' | awk '/ii/{print $2}' | grep -ve '$(uname -r | sed -r 's/-[a-z]+//')')"
+/home/joey/.aliases
