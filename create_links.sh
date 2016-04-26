@@ -4,6 +4,6 @@
 
 for file in ls .*; do
   if [ -f "$file" ]; then
-    ( cp -si "$file" -t ~/ )
+    ( ln -vf "$file" -t ~/ )
   fi
 done
