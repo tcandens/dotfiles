@@ -14,7 +14,7 @@ alias capsoff='setxkbmap -option caps:swapescape'
 alias touchoff='xinput disable "ELAN Touchscreen"'
 alias fonts='fc-cache -fv'
 # Shortcut for cleaning up /boot whenever partition is getting full
-alias cleanboot="sudo apt-get purge $(dpkg -l linux-{image,headers}-'[0-9]*' | awk '/ii/{print $2}' | grep -ve '$(uname -r | sed -r 's/-[a-z]+//')')"
+#alias cleanboot="sudo apt-get purge $(dpkg -l linux-{image,headers}-'[0-9]*' | awk '/ii/{print $2}' | grep -ve '$(uname -r | sed -r 's/-[a-z]+//')')"
 
 # Collection of Docker & Docker-compose conveniences
 alias dc="docker-compose"
