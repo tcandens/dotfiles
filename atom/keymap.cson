@@ -1,0 +1,58 @@
+# Unset default bindings in linux.json
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-k': 'unset!'
+  'ctrl-j': 'unset!'
+
+# Remove application quit keymap
+'body':
+  'ctrl-q': 'unset!'
+
+# Allow vim movements in autocomplete list
+'atom-workspace atom-text-editor.autocomplete-active':
+  'ctrl-k': 'autocomplete-plus:move-up'
+  'ctrl-j': 'autocomplete-plus:move-down'
+
+# Toggle terminal-plus
+'atom-text-editor':
+  'ctrl-1': 'terminal-plus:toggle'
+
+'atom-workspace .terminal-plus':
+  'ctrl-shift-t': 'terminal-plus:new'
+  'ctrl-shift-n': 'terminal-plus:next'
+  'ctrl-shift-p': 'terminal-plus:prev'
+  'ctrl-shift-r': 'terminal-plus:rename'
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+
+  # Allow vim movements between panes
+  'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
+
+  # Vim surround
+  'S': 'vim-mode-plus:surround-word'
+  'y s': 'vim-mode-plus:surround'
+  'm s': 'vim-mode-plus:map-surround'
+  'c s': 'vim-mode-plus:change-surround-any-pair'
+  'd s': 'vim-mode-plus:delete-surround-any-pair'
+
+  # Expose ex-mode with workaround
+  ':': 'ex-mode:open'
+
+# 'atom-text-editor.vim-mode-plus.insert-mode':
+#   'ctrl-j': 'autocomplete-plus:move-up'
+#   'ctrl-k': 'autocomplete-plus:move-down'
+
+'atom-workspace':
+  # Emulate vim buffer switching
+  '] b': 'pane:show-next-item'
+  '[ b': 'pane:show-previous-item'
+
+'.modal':
+  'ctrl-k': 'core:move-up'
+  'ctrl-j': 'core:move-down'
+
+'.tree-view':
+  'ctrl-u': 'vim-mode-plus:scroll-half-screen-up'
+  'ctrl-d': 'vim-mode-plus:scroll-half-screen-down'
